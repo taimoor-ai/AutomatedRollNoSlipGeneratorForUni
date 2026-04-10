@@ -144,3 +144,19 @@ export function processSheet(data) {
   return classMap;
 }
 
+export function generateRollSlips(students, parsedData) {
+  // 1. convert class data into map (FAST LOOKUP)
+  const classMap = {};
+ 
+  parsedData.forEach((cls) => {
+    classMap[cls.class] = cls.papers;
+  }); 
+ console.log("CLASSmAP =",classMap)
+  // 2. attach papers to students
+  return students.map((student) => {
+    return {
+      ...student,
+      exams: classMap[student.class] || [] // 👈 key logic
+    };
+  });
+}

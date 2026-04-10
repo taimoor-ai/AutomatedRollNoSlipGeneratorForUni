@@ -109,3 +109,38 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+.slip {
+  width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid black;
+  font-family: Arial;
+}
+
+.slip h2, .slip h3 {
+  text-align: center;
+}
+
+.info {
+  margin: 10px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+.note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}

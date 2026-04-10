@@ -1,6 +1,6 @@
 import { useState } from "react";
 import mammoth from "mammoth";
-import { parseDateSheet, groupByDate, groupByClassWithPapers } from "../utils/parser";
+import { parseDateSheet, groupByDate, groupByClassWithPapers,generateRollSlips } from "../utils/parser";
 
 export default function UploadDateSheet({
   setParsedData,
@@ -50,6 +50,7 @@ export default function UploadDateSheet({
           ))}
         </tbody>
       </table>
+   
     </div>
   );
 }
