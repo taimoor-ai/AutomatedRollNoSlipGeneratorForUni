@@ -1,8 +1,9 @@
 import { useState } from "react";
+import UploadDateSheet from "./components/UploadDateSheet";
 
 function App() {
   const [students, setStudents] = useState([]);
-
+  const [parsedData, setParsedData] = useState([]);
   const handleSelectFile = async () => {
     const data = await window.api.selectExcel();
     console.log(data);
@@ -12,7 +13,7 @@ function App() {
   return (
     <div>
       <h1>Roll No Slip System</h1>
-
+      <UploadDateSheet setParsedData={setParsedData}/>    
       <button onClick={handleSelectFile}>
         Select Excel File
       </button>
