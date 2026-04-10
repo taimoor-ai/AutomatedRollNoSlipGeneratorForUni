@@ -1,0 +1,66 @@
+# =========================
+# Node modules
+# =========================
+node_modules/
+
+# =========================
+# Electron build output
+# =========================
+dist/
+out/
+build/
+
+# =========================
+# React build (Vite/CRA)
+# =========================
+client/dist/
+client/build/
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Electron cache / temp
+# =========================
+*.log
+
+# =========================
+# Vite cache
+# =========================
+node_modules/.vite
+
+# =========================
+# PDF / generated outputs (IMPORTANT for your project)
+# =========================
+outputs/
+*.pdf
+
+# =========================
+# Uploads (Excel files temp storage)
+# =========================
+uploads/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
