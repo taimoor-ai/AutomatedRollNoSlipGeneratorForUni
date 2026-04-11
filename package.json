@@ -2,25 +2,45 @@
   "name": "automatedrollnoslipgenrator",
   "version": "1.0.0",
   "main": "electron/main.js",
+  "description": "Automated Roll No Slip Generator Desktop App",
+  "author": "Taimoor",
+  "license": "ISC",
+
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-client": "npm run build --prefix client",
+    "dist": "npm run build-client && electron-builder"
   },
+
+  "build": {
+    "appId": "com.rollslip.app",
+    "productName": "Roll Slip Generator",
+
+    "directories": {
+      "output": "dist"
+    },
+
+    "files": [
+  "electron/**/*",
+  "client/dist/**/*",
+  "package.json"
+],
+
+    "win": {
+      "target": "nsis"
+    }
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taimoor-ai/AutomatedRollNoSlipGeneratorForUni.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/taimoor-ai/AutomatedRollNoSlipGeneratorForUni/issues"
-  },
-  "homepage": "https://github.com/taimoor-ai/AutomatedRollNoSlipGeneratorForUni#readme",
-  "description": "",
+
   "devDependencies": {
-    "electron": "^41.2.0"
+    "electron": "^41.2.0",
+    "electron-builder": "^26.8.1"
   },
+
   "dependencies": {
     "xlsx": "^0.18.5"
   }
