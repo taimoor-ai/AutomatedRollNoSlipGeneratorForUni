@@ -61,11 +61,11 @@ ipcMain.handle("select-excel", async () => {
   if (result.canceled) return null;
 
   const filePath = result.filePaths[0];
-
   // 📊 Read Excel
   const workbook = XLSX.readFile(filePath);
   const sheet = workbook.Sheets[workbook.SheetNames[0]];
   const data = XLSX.utils.sheet_to_json(sheet);
-
+  console.log("Selected file:", data);
+  
   return data;
 });
